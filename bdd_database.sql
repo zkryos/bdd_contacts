@@ -6,6 +6,7 @@ USE bdd_contact_sql;
 CREATE table pays_iso_3 (
     alpha_3 CHAR(3) PRIMARY KEY, 
     nom VARCHAR (50)
+    alpha_2 CHAR(3) 
 ); 
 
 INSERT INTO pays_iso_3 (alpha_3, nom) VALUES
@@ -13,3 +14,19 @@ INSERT INTO pays_iso_3 (alpha_3, nom) VALUES
     ('SUI', 'SUISSE'),
     ('TR', 'TURQUIE'),
     ('BE', 'BELGIQUE'); 
+
+CREATE table contacts ( 
+ id int PRIMARY KEY AUTO_INCREMENT, 
+ nom VARCHAR(70), 
+ prenom VARCHAR(70),
+ date_de_naisssance DATE, 
+ sexe VARCHAR(10), 
+ adresse TEXT,
+ cp VARCHAR(15), 
+ ville VARCHAR(70), 
+FOREIGN KEY (pays) REFERENCES pays_iso_3(alpha_3) 
+); 
+
+
+
+
