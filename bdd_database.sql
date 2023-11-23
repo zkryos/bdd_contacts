@@ -16,5 +16,17 @@ INSERT INTO pays (iso_3, nom, iso_2, nationalite) VALUES
     ('TUR', 'Turquie', 'TR', 'Turc'),
     ('BEL', 'Belgique', 'BE', 'Belge');
 
+CREATE TABLE contacts (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(70),
+    prenom VARCHAR(70),
+    date_de_naissance DATE,
+    sexe VARCHAR(10),
+    adresse TEXT,
+    cp VARCHAR(10),
+    ville VARCHAR(70),
+    pays_iso_3 CHAR(3),
+    FOREIGN KEY (pays_iso_3) REFERENCES pays(iso_3)
+); 
 
 
