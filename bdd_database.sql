@@ -27,6 +27,13 @@ CREATE table contacts (
 FOREIGN KEY (pays) REFERENCES pays_iso_3(alpha_3) 
 ); 
 
+CREATE table telephone ( 
+ id int PRIMARY KEY AUTO_INCREMENT, 
+ id_contact int  AUTO_INCREMENT,
+ numero VARCHAR(40), 
+ type TINYINT
+); 
+
 
 
 
