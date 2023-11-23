@@ -49,7 +49,7 @@ CREATE TABLE telephone (
     id INT PRIMARY KEY AUTO_INCREMENT,
     id_contact INT,
     numero VARCHAR(50),
-    type BYTE,
+    type TINYINT,
     FOREIGN KEY (id_contact) REFERENCES contacts(id)
 );
 
