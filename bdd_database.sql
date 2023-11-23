@@ -8,3 +8,8 @@ CREATE table pays_iso_3 (
     nom VARCHAR (50)
 ); 
 
+INSERT INTO pays_iso_3 (alpha_3, nom) VALUES
+    ('FRA', 'FRANCE'),
+    ('SUI', 'SUISSE'),
+    ('TR', 'TURQUIE'),
+    ('BE', 'BELGIQUE'); 
