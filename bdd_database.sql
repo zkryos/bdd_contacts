@@ -10,6 +10,11 @@ CREATE TABLE pays (
     nationalite VARCHAR(50)
 );
 
+INSERT INTO pays (iso_3, nom, iso_2, nationalite) VALUES
+    ('FRA', 'France', 'FR', 'Français'),
+    ('CHE', 'Suisse', 'CH', 'Suisse'),
+    ('TUR', 'Turquie', 'TR', 'Turc'),
+    ('BEL', 'Belgique', 'BE', 'Belge');
 
 
 
